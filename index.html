@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generated App</title>
     <style>body {
-  font-family: Arial, sans-serif;
+  font-family: monospace;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,13 +13,11 @@
   margin: 0;
   background-color: #f0f0f0;
 }
-pre {
+#display-area {
   background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
   white-space: pre;
-  font-family: monospace;
   font-size: 1.2em;
 }</style>
 </head>
@@ -27,21 +25,24 @@ pre {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pre Text Display</title>
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<pre id="displayText"></pre>
+<pre id="display-area"></pre>
 <script src="script.js"></script>
 </body>
 </html>
     <script>document.addEventListener('DOMContentLoaded', () => {
-  const pre = document.getElementById('displayText');
-  pre.textContent = `Line 1
-"Line 2 with quotes"
-Line 3 with a backslash \\.`;
+  const preElement = document.getElementById('display-area');
+  const textLines = [
+    'Line 1',
+    '"Line 2 with quotes"',
+    'Line 3 with a backslash \\'
+  ];
+  preElement.textContent = textLines.join('\n');
 });</script>
 </body>
 </html>
