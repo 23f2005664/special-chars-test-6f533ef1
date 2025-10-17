@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generated App</title>
     <style>body {
-  font-family: monospace;
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,36 +13,36 @@
   margin: 0;
   background-color: #f0f0f0;
 }
-#display-area {
-  background-color: #fff;
+.container {
   padding: 20px;
-  border: 1px solid #ccc;
-  white-space: pre;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#quote {
   font-size: 1.2em;
-}</style>
+  color: #333;
+}
+</style>
 </head>
 <body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pre Text Display</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quotes and Backslashes</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<pre id="display-area"></pre>
+<div class="container">
+  <p id="quote">"This is a sample quote with a backslash: \"</p>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
     <script>document.addEventListener('DOMContentLoaded', () => {
-  const preElement = document.getElementById('display-area');
-  const textLines = [
-    'Line 1',
-    '"Line 2 with quotes"',
-    'Line 3 with a backslash \\'
-  ];
-  preElement.textContent = textLines.join('\n');
+  // You can add dynamic behavior here if needed
 });</script>
 </body>
 </html>
